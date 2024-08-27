@@ -14,6 +14,5 @@ declare module 'vue' {
     AList: typeof import('ant-design-vue/es')['List']
     AListItem: typeof import('ant-design-vue/es')['ListItem']
     ARow: typeof import('ant-design-vue/es')['Row']
-    ATextarea: typeof import('ant-design-vue/es')['Textarea']
   }
 }
