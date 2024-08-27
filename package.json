@@ -12,7 +12,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "report": "vite build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "gh-pages -d dist"
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [
@@ -44,8 +45,9 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
-    "prettier": "^3.2.5",
+    "gh-pages": "^6.1.1",
     "npm-run-all2": "^6.2.0",
+    "prettier": "^3.2.5",
     "typescript": "~5.4.0",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.3.1",
