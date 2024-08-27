@@ -13,7 +13,7 @@
     "format": "prettier --write src/",
     "report": "vite build",
     "prepare": "husky",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/zoujun96/zoujun96.github.io.git -b gh-pages"
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [
@@ -45,9 +45,8 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
-    "gh-pages": "^6.1.1",
-    "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
+    "npm-run-all2": "^6.2.0",
     "typescript": "~5.4.0",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.3.1",

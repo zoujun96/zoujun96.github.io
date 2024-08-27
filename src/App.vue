@@ -32,14 +32,7 @@
             type="info"
             style="margin: 24px 0"
           />
-          <a-list
-            size="large"
-            bordered
-            :data-source="parseKeyList"
-            :locale="{
-              emptyText: '点击翻译即可生成key'
-            }"
-          >
+          <a-list size="large" bordered :data-source="parseKeyList">
             <template #renderItem="{ item, index }">
               <a-list-item @click="handleCopy(`${keyArr[index]}${item}`)" style="cursor: copy">
                 <span style="background-color: #ffe58f">{{ keyArr[index] }}</span
