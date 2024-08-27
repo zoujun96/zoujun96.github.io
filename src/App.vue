@@ -23,7 +23,7 @@
         <a-col :xxl="12" :xl="12" :lg="12" :md="24" :sm="24" :xs="24" style="padding: 24px">
           <a-input-search
             v-model:value="translateKey"
-            placeholder="请输入翻译后的文本，按回车或点击右侧搜索生成key"
+            placeholder="请输入翻译后的文本"
             enter-button
             @search="handleParseKey"
           />
