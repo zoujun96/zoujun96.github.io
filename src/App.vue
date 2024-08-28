@@ -50,6 +50,7 @@
   import zhCN from 'ant-design-vue/es/locale/zh_CN'
   import axios from 'axios'
   import { md5 } from 'js-md5'
+  import jsonp from './jsonp'
   import { useClipboard } from '@vueuse/core'
   import { message } from 'ant-design-vue'
   const query = ref<string>('')
@@ -79,16 +80,16 @@
     }
     const sign = md5(`${params.appid}${value}${params.salt}kUdphfHKbVB0pV2vc8Ri`)
     loading.value = true
-    const response = await axios.get('https://fanyi-api.baidu.com/api/trans/vip/translate', {
-      params: {
-        ...params,
-        sign
-      }
+    const response = await jsonp('https://fanyi-api.baidu.com/api/trans/vip/translate', {
+      ...params,
+      sign
     })
     loading.value = false
 
-    if (response.status === 200 && response.data && response.data['trans_result']) {
-      resultList.value = response.data['trans_result']
+    if (response['trans_result'] && response['trans_result'].length) {
+      resultList.value = response['trans_result']
+    } else {
+      message.error('翻译失败')
     }
   }
 
